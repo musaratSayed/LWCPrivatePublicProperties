@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-p-around_medium slds-box">
+        <p>
+        <lightning-input type="text" label="Private Reactive:" onchange={changeHandlerReactive}></lightning-input>
+        </br>
+        Reactive Private Property: {privateReactiveProperty}</p>
+    </div>
+    <div class="slds-box slds-p-around-medium">
+            <p>
+                    <lightning-input type="text" label="Private NON-Reactive:" onchange={changeHandlerNonReactive}></lightning-input>
+                    </br>
+                    Reactive Private Property: {privateNonReactiveProperty}</p>
+    </div>
+</template>
