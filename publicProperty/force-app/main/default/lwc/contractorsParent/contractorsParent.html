@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Parent Comp - All Contractors">
+        <ul>
+            <template for:each={contractors} for:item="con">
+                <li key={con.cName}>
+                    <c-contractor-child contractor-detail={con}></c-contractor-child>
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
