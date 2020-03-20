@@ -1,3 +1,42 @@
+# Section 2: JavaScript Properties
+1.      Private -Non Reactive Properties:
+-         Non reactive – doesn’t create any data binding or rerender component when value changes
+-         Declared in js file without any decorator
+2.      Private Properties Reactive:
+-         Any change in value rerenders entire component and thus is dynamic.
+-         Create change handler in js file to handle the value change.
+-         Import track module
+-         Use @track decorator while declaring property in js file
+3.      Getter Private Properties
+-         Javascript getters can be used to compute the value of a property instead of change Handler or compute functions
+-         Syntax of defining getter function is below
+-         Declare @track propertyname
+get propertyname(){
+      return `Your Idea value: ${this.propertname}`
+}
+-         Parent Component cannot set/pass value in Child component property but can use getter to get data.
+4.      Public Properties (Used to send/pass data from Parent to Child)
+-         import api module
+-         Decorate with @api variable_name
+-         Declared in child Component / no value is assigned in child Comp / are Read-Only – You cannot change value in child component it is declared/ You can assign them default value in child component but not update it.
+-         Value is always supplied/changed/updated by parent component.
+-         https://github.com/musaratSayed/LWCPrivatePublicProperties/tree/master/publicProperty
+-          
+ 
+-         If value in Parent comp is changed, then it is automatically passed to child component and child component re-renders.
+ 
+ 
+5.      Public Boolean Properties
+-         @api decorator
+-         Public & reactive in nature
+-         Child Component – define/declare Boolean property – default value is false
+-         In Parent comp – Boolean attributes on standard HTML are set to true by adding the attribute to the element
+-         The absence of attribute defaults the attribute to false
+For eg: in Parent component – we define property
+@api showBool = false;
+In child comp
+<c-child-comp showBool> -- makes it true
+
 # Salesforce App
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
